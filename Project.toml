@@ -1,0 +1,11 @@
+[deps]
+AbaqusReader = "bc6b9049-e460-56d6-94b4-a597b2c0390d"
+FEMBase = "fbcbbc08-f1bf-5204-9233-b69f5d396135"
+FEMBasis = "353fb843-c566-51e6-ba49-78b3e3d5ebb5"
+FEMSparse = "55713501-a877-5f50-80b5-148fff7ff4b3"
+JuAFEM = "30d91d44-8115-11e8-1d28-c19a5ac16de8"
+JuliaFEM = "f80590ac-b429-510a-8a99-e7c46989f22d"
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+Tensors = "48a634ad-e948-5137-8d70-aa71f2a747f4"
+TimerOutputs = "a759f4b9-e2f1-59dc-863e-4aeb61b1ea8f"
