@@ -103,8 +103,8 @@ function assemble_element!(problem::Problem{Poisson},
     return nothing
 end
 
-mesh = abaqus_read_mesh("../JuAFEM_Performance_Study/EIFFEL_TOWER_TET10_921317.inp")
-#mesh = abaqus_read_mesh("../JuAFEM_Performance_Study/EIFFEL_TOWER_TET10_220271.inp")
+mesh = abaqus_read_mesh("EIFFEL_TOWER_TET10_921317.inp")
+#mesh = abaqus_read_mesh("EIFFEL_TOWER_TET10_220271.inp")
 
 function test_assembler_timing()
     renumber_mesh!(mesh)
@@ -120,9 +120,9 @@ function test_assembler_timing()
 
     elements = group_by_element_type(tower.elements)[Element{Tet10}]
 
-    @time assemble_threaded!(tower, elements, t)
+    assemble_normal!(tower, elements, t)
     empty!(tower.assembly)
-    @time assemble_normal!(tower, elements, t)
+    assemble_threaded!(tower, elements, t)
     s_single = @elapsed @time assemble_normal!(tower, elements, t)
     empty!(tower.assembly)
     s_thread = @elapsed @time assemble_threaded!(tower, elements, t)
